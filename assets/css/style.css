@@ -1,9 +1,9 @@
 @import url(reset.css);
 
 
-/* HEADER */
-/* cabecalho */
-.cabecalho, .roda-pe {
+/* HEADER - cabecalho*/
+
+.cabecalho {
     width: 100%;
     height: 7rem;
     background-color: rgb(32, 24, 24);
@@ -12,20 +12,24 @@
     align-items: center;
     padding: 0 1.5rem;
 }
+
 .container-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 0;
 }
+
 .container-logo p {
     font-size: 3rem;
 }
+
 .seach {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .seach input {
     width: 26rem;
     height: 3rem;
@@ -36,6 +40,7 @@
     border-radius: 0.5rem;
     margin-right: 1rem;
 }
+
 .seach button {
     height: 3rem;
     width: 10rem;
@@ -44,52 +49,51 @@
     font-size: 1.5rem;
     background-color: rgb(110, 226, 120);
 }
+
 .cabecalho a img {
     width: 7rem;
     border-radius: 50%;
     border: .2rem solid rgb(255, 255, 255);
     cursor: pointer;
 }
-/* MAIN */
-.conteudo {
+
+/* MAIN  - Banner*/
+main {
+    width: 100%;
+    height:auto;
+   
+}
+main .banner {
+    width: 100%;
     position: relative;
-    width: 100%;
     height: calc(100vh - 7rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-/* Banner  Carrosel*/
-
-/* .banner{
+main .banner .container-slider {
+    width: 100%;
+  
     
-} */
-.banner{
-    width: 100%;
- 
 }
-.conteudo .banner .container-slider {
-    width: 100%;
-}
-.conteudo .banner .slider {
+.container-slider .slider{
     display: none;
+    width: 100%;
     position: absolute;
-    width: 100%;
-}
-.conteudo .banner .slider img {
-    width: 100%;
     height: calc(100vh - 7rem);
+    /*fica tudo amontoado*/
+   
 }
 
-.conteudo .banner .slider h2{
-    position: absolute;
-    font-size: 2rem;
-    width: 50%;
+main .banner .container-slider .slider img {
+    width: 100vw;
+    /* height: 100vh; */
+    height: calc(100vh - 7rem);
+    
 }
-.conteudo .banner .mostrar {
+
+main .banner .slider.mostrar {
     display: flex;
 }
-.conteudo .banner .container-slider button {
+
+main .banner .container-slider button {
     position: absolute;
     top: 50%;
     background: url(../image/seta.png) center center no-repeat;
@@ -99,141 +103,62 @@
     border: none;
     cursor: pointer;
 }
+
 #next {
     right: 5%;
 }
+
 #back {
     left: 5%;
     transform: rotate(180deg);
 }
+
 .opacidade {
     opacity: 0.5;
 }
 
-/* PROJETOS */
-
-
-  .container-produtos {
-    width: 90%;
+/* PRODUTOS*/
+main .container-produtos {
+    position: initial;
+    width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1.5fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1.5fr));
     grid-template-rows: repeat(auto,10rem);
     grid-gap: 3rem;
-    
     padding: 3rem 2rem;
     justify-items: center;
     
 }
-
-.container-produtos .projeto-item {
-    width: 300px;
-    height: 350px;
-    align-items: center;
+main .container-produtos .projeto-item {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    justify-content: center;
     box-shadow: 0.5rem 0.5rem 1rem black;
 }
-
-/* .projeto-imagem.projeto1 {
-    width: 100%;
-    height: 20rem;
-    background: url(/assets/image/image1.png) center center no-repeat;
-    margin-bottom: 1rem;
-}  */
-
-.container-produtos .projeto-item img {
+main .container-produtos .projeto-item img {
     width: 100%;
     height: 65%;
     
 }
-
-
-
-
-
-/* Footer */
-.roda-pe{
-    display: none;
+main .container-produtos .projeto-item p{
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
-.roda-pe p{
-   color: white;
-   font-size: 1.5rem;
+main .container-produtos .projeto-item p:nth-child(2){
+    margin-top: 1.8rem;
+   
 }
-.roda-pe ul{
-    display: flex;
-}
-.roda-pe ul a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+main .container-produtos .projeto-item p:nth-child(4){
+    font-size: 1.3rem;
+    position: absolute;
+    background-color: red;
+    width: 2.5rem;
     border-radius: 50%;
-    margin-right: 1rem;
-    width: 5rem;
-    height: 5rem;
-    font-size: 2rem;
-    border: .1rem solid white;
-    color: var(--vermelho);
-    text-align: center;
+    top: -.5rem;
+    right: -.5rem;
 }
 
-
- 
-/* .container-produtos {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: repeat(auto,300px);
-    grid-gap: 10px;
-    background-color: white;
-    padding: 3rem;
-    justify-items: center;
-    border-radius: 1rem;
-}
-
-.container-produtos .projeto-item {
-    width: 250px;
-    height: 250px;
-    align-items: center;
-    box-shadow: 0.5rem 0.5rem 1rem black;
-}
-
-.projeto-imagem.projeto1 {
-    width: 100%;
-    height: 20rem;
-    background: url(/assets/image/image1.png) center center no-repeat;
-    margin-bottom: 1rem;
-} */
-/*
-.projeto-imagem.projeto2 {
-    width: 100%;
-    height: 20rem;
-    background: url(/assets/image/bote.png) center center no-repeat;
-    margin-bottom: 1rem;
-}
-
-.projeto-imagem.projeto3 {
-    width: 100%;
-    height: 20rem;
-    background: url(/assets/image/bote.png) center center no-repeat;
-    margin-bottom: 1rem;
-}
-
-.projeto-imagem.projeto4 {
-    width: 100%;
-    height: 20rem;
-    background: url(/assets/image/bote.png) center center no-repeat;
-    margin-bottom: 1rem;
-
-}
-
-.projeto-imagem > h2 {
-    padding-top: 60%;
-    font-size: 2.5rem;
-    text-align: center;
-    bottom: 1rem;
-}
-.projeto-item a p{
-    text-align: center;
-    padding: 0.5rem 1rem;
-    font-size: 1.7rem;
-    color: black;
-} */
